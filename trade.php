@@ -16,8 +16,8 @@ $allPrices = $priceData->getAllPrices();
 
 $candles = $priceData->candles('ETHBTC', "1d");
 $oscillator = new Oscillator();
-$sma = $oscillator->SMA($candles, 200);
-echo $sma;
+$rsi = $oscillator->RSI($candles, 14);
+echo $rsi;
 
 //foreach ($allPrices as $symbol => $price) {
 //    $candles = $priceData->candles($symbol, "1d");

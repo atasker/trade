@@ -58,6 +58,8 @@ class Oscillator {
      * @return int
      */
 
+    //TODO: RSI function returning substantially different values to Binance calculations
+
     public function RSI($candles, $timeframe) {
         $adjusted_timeframe = $timeframe + 2;
         // reducing the array to the user requested time period
