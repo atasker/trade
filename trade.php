@@ -1,23 +1,23 @@
 <?php
 
-require 'vendor/autoload.php';
-require 'classes/API.php';
-require 'classes/PriceData.php';
-require 'classes/Oscillator.php';
-
-error_reporting(E_ALL);
+include 'inc.php';
 
 $api = new API();
 $api->activate();
 
-$priceData = new PriceData($api);
+//while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+//    echo $row['open'].' '.$row['high'];
+//}
 
-$allPrices = $priceData->getAllPrices();
+//$priceData = new PriceData($api);
 
-$candles = $priceData->candles('ETHBTC', "1d");
-$oscillator = new Oscillator();
-$rsi = $oscillator->RSI($candles, 14);
-echo $rsi;
+//$allPrices = $priceData->getAllPrices();
+
+//$candles = $priceData->candles('ETHBTC', "1d");
+//print_r($candles);
+//$oscillator = new Oscillator();
+//$rsi = $oscillator->RSI($candles, 14);
+//print_r($candles);
 
 //foreach ($allPrices as $symbol => $price) {
 //    $candles = $priceData->candles($symbol, "1d");
