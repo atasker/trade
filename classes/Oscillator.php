@@ -17,7 +17,6 @@ class Oscillator {
      * @return float
      */
 
-    //TODO: see line 24, the RSI needs this check also (if a user requests a higher than available RSI)
     //TODO: modify RSI to return rounded numbers, check binance for what they use
 
     public function SMA($candles, $timeframe) {
