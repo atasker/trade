@@ -13,7 +13,7 @@ class DB {
     public $db;
 
     public function __construct() {
-        $this->db = new PDO('mysql:host=localhost;dbname=highland;charset=utf8mb4', 'root', '');
+        $this->db = new PDO('mysql:host=localhost;dbname=highland;charset=utf8mb4', 'root', 'thomas8185');
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $this->db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
     }

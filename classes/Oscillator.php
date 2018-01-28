@@ -17,7 +17,7 @@ class Oscillator {
      * @return float
      */
 
-    //TODO: see line 24, the RSI needs this check also (is a user requests a higher than available RSI)
+    //TODO: see line 24, the RSI needs this check also (if a user requests a higher than available RSI)
     //TODO: modify RSI to return rounded numbers, check binance for what they use
 
     public function SMA($candles, $timeframe) {
@@ -61,6 +61,10 @@ class Oscillator {
     //TODO: RSI function returning substantially different values to Binance calculations
 
     public function RSI($candles, $timeframe) {
+        if (count($candles) < $timeframe) {
+            echo "Not enough available data for the " . $timeframe . " RSI, using max available: " . count($candles) . PHP_EOL;
+            $timeframe = count($candles);
+        }
         $adjusted_timeframe = $timeframe + 2;
         // reducing the array to the user requested time period
         $subset = array_slice($candles, -$adjusted_timeframe);

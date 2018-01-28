@@ -9,15 +9,15 @@ $api->activate();
 //    echo $row['open'].' '.$row['high'];
 //}
 
-//$priceData = new PriceData($api);
+$priceData = new PriceData($api);
 
 //$allPrices = $priceData->getAllPrices();
 
-//$candles = $priceData->candles('ETHBTC', "1d");
+$candles = $priceData->candles('ETHBTC', "1d");
 //print_r($candles);
-//$oscillator = new Oscillator();
-//$rsi = $oscillator->RSI($candles, 14);
-//print_r($candles);
+$oscillator = new Oscillator();
+$rsi = $oscillator->RSI($candles, 14);
+echo $rsi;
 
 //foreach ($allPrices as $symbol => $price) {
 //    $candles = $priceData->candles($symbol, "1d");
